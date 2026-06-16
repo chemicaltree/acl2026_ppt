@@ -1,0 +1,10 @@
+torch>=2.5.0
+numpy>=2.2.0
+scipy>=1.15.0
+scikit-learn>=1.0.0
+transformers>=4.47.0
+datasets>=3.0.0
+trl>=0.13.0
+wandb
+fire>=0.4.0
+
