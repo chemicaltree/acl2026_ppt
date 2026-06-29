@@ -5,13 +5,14 @@ Reproduction code for our ACL 2026 paper:
 **"Language Acquisition Device in Large Language Models"**
 Masato Mita, Taiga Someya, Ryo Yoshida, Yohei Oseki
 
-[[Paper (arXiv)]](https://arxiv.org/abs/2605.16758)
+[[Paper]](https://aclanthology.org/2026.acl-long.895/)
+[[arxiv]](https://arxiv.org/abs/2605.16758)
 
 This codebase builds on the experimental framework from [Hu et al. (2025)](https://github.com/michahu/pre-pretraining).
 
 ## Overview
 
-We propose MP-STRUCT and MP-STRUCT CORE, linguistically-structured synthetic data for pre-pretraining (PPT) that encodes hierarchical composition, feature-based dependencies, and long-distance displacement based on Minimalist Grammar. Models pre-pretrained on these sequences for just 500 steps achieve up to 31% token efficiency gains when subsequently trained on natural language.
+We propose MP-STRUCT and MP-STRUCT CORE, linguistically-structured synthetic data for pre-pretraining (PPT) that encodes hierarchical composition, feature-based dependencies, and long-distance displacement based on the Minimalist Program (MP). Models pre-pretrained on these sequences for just 500 steps achieve up to 31% token efficiency gains when subsequently trained on natural language.
 
 ## Setup
 
@@ -165,10 +166,24 @@ Original code: https://github.com/michahu/pre-pretraining
 ## Citation
 
 ```bibtex
-@inproceedings{mita2026language,
-  title={Language Acquisition Device in Large Language Models},
-  author={Mita, Masato and Someya, Taiga and Yoshida, Ryo and Oseki, Yohei},
-  booktitle={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
-  year={2026}
+@inproceedings{mita-etal-2026-language,
+    title = "Language Acquisition Device in Large Language Models",
+    author = "Mita, Masato  and
+      Someya, Taiga  and
+      Yoshida, Ryo  and
+      Oseki, Yohei",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.895/",
+    pages = "19564--19577",
+    ISBN = "979-8-89176-390-6",
+    abstract = "Large Language Models (LLMs) remain substantially less data-efficient than humans. Pre-pretraining (PPT) on synthetic languages has been proposed to close this gap, with prior work emphasizing highly expressive formal languages such as $k$-Shuffle Dyck. Inspired by the Language Acquisition Device (LAD) hypothesis, which posits that innate constraints preemptively restrict the learner{'}s hypothesis space to natural-language-like structure, we propose LAD-inspired PPT: pre-pretraining on MP-STRUCT, a formal language whose strings encode hierarchical composition, feature-based dependencies, and long-distance displacement via MERGE, AGREE, and MOVE. A brief 500-step PPT with MP-STRUCT matches strong formal-language baselines in token efficiency while additionally imparting a human-like resistance to structurally implausible languages. Analyzing simplified variants, we find that MP-STRUCT CORE outperforms $k$-Shuffle Dyck despite not being definable in C-RASP (a formal bound on transformer expressivity), challenging the prior hypothesis that effective PPT languages must be both hierarchically expressive and circuit-theoretically learnable. We show that functional landmarks, which reduce dependency resolution ambiguity, are a key driver, suggesting that effective PPT design depends not only on expressivity but also on the accessibility of dependency resolution."
 }
 ```
